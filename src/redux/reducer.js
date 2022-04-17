@@ -8,7 +8,8 @@ export const apartmentReducer = (state = initState, { type, payload }) => {
     switch(type) {
         case GET_DATA :
             return {
-                ...state, payload
+                ...state, 
+                flats : payload
             }
 
         default :
