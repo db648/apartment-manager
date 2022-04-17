@@ -1,10 +1,11 @@
-import { Navbar } from "./navbar/navbar"
+
+import { NavbarProduct } from "./navbar/navbar1"
 
 
 export const Homepage = () => {
     return (
         <>
-            <Navbar />
+            <NavbarProduct />
             
         </>
     )

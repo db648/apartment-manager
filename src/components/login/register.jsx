@@ -14,21 +14,21 @@ export const Register = () => {
   const [append, setAppend] = useState(false);
   const navigate = useNavigate();
 
-//   const onSubmit = (data) => {
-//     console.log("submit", data);
-//     axios
-//       .post("https://flatsunit6.herokuapp.com/user/register", data)
-//       .then((res) => {
-//         setAppend(true);
-//         setTimeout(() => {
-//           navigate("/login");
-//         }, 1000);
-//       })
-//       .catch((err) => {
-//         alert("Enter Correct Details");
-//       });
-//   };
-const onSubmit = data => console.log(data);
+  const onSubmit = (data) => {
+    console.log("submit", data);
+    axios
+      .post("https://flatsunit6.herokuapp.com/user/register", data)
+      .then((res) => {
+        setAppend(true);
+        setTimeout(() => {
+          navigate("/login");
+        }, 1000);
+      })
+      .catch((err) => {
+        alert("Enter Correct Details");
+      });
+  };
+// const onSubmit = data => console.log(data);
   return (
     <>
       <Navbar />
