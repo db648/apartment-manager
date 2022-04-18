@@ -95,7 +95,7 @@ export const Register = () => {
                       >
                         Register
                       </button>
-                      {append ? <p>Appending..</p> : ""}
+                      {append ? <p>Loading..</p> : ""}
                     </div>
 
                     <p className="text-center text-muted mt-5 mb-0">

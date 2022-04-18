@@ -89,7 +89,7 @@ export const Login = () => {
                       >
                         Login
                       </button>
-                      {append ? <p>Appending..</p> : ""}
+                      {append ? <p>Loading..</p> : ""}
                     </div>
                   </form>
                 </div>

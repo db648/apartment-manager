@@ -17,6 +17,7 @@ export const FlatDetails = () => {
       <NavbarProduct />
       
       <div className="bg-light w-50 border m-auto textclr">
+      <h1 className="center clr">Apartment-Management System</h1>
         <br />
         {single2.map((ele) => (
           <>
@@ -25,7 +26,7 @@ export const FlatDetails = () => {
             <ul>
               <li>Resident Type : {ele.type}</li>
               <br />
-              <li>Block Name : {ele.block}</li>
+              <li>Block Name : {ele.block} Block</li>
               
               <ul>
                 <br />
