@@ -13,18 +13,19 @@ export const NavbarProduct = () => {
     }
 
     return (
-        <div className="navbar">
+        <div className="navbar lging clr">
             <div className="left d-flex justify-content-around p-1">
                 <button type="button" className="btn btn-info" onClick={() => {
                     navigate("/")
                 }}>
                     Home
+                    
                 </button>
-                <img className="apartment" src="https://qph.cf2.quoracdn.net/main-qimg-35087cc2dfd9af491fc8640398d53aa7-lq" alt="apartment"/>
-                <h1 className="center">Apartments</h1>
+                   
 
                
             </div>
+            <h1 className="center">Apartments-Details</h1>
             
             <div className="d-flex bd-highlight">   
                       

@@ -14,9 +14,9 @@ export const FlatDetails = () => {
   console.log("2222", single2);
 
   return (
-    <div>
+    <div className="singleflatimg">
       <NavbarProduct />
-      <div className="bg-light w-75 border m-auto">
+      <div className="bg-light w-75 border m-auto textclr">
         <h1>Flat details</h1>
         {single2.map((ele) => (
           <>

@@ -36,6 +36,13 @@ export const Homepage = () => {
     setResData([...data]);
   }
 
+  let data1 =  useSelector((state) => state.apartmentReducer.flats);
+  function sortPopulation1() {
+    data1 = CityData.sort((a, b) => b.number - a.number);
+    console.log(data);
+    setResData([...data]);
+  }
+
   function eachFlat(i) {
     navigate(`/flat/${i}`);
   }
@@ -74,28 +81,38 @@ export const Homepage = () => {
     <>
       <NavbarProduct />
 
-      <div className="main">
-        <div className="flex">
+      <div className="lging">
+        <div className="flex marginl">
             <div>
               <button
-                className="btn btn-success m-2 p-2 "
+                className="btn btn-outline-warning m-2 p-2 "
                 onClick={() => {
                   sortPopulation();
                 }}
               >
-                Sort By Flat Number
+                Sort By Flat Number Asc Order
+              </button>
+            </div>
+            <div>
+              <button
+                className="btn btn-outline-warning m-2 p-2 "
+                onClick={() => {
+                  sortPopulation1();
+                }}
+              >
+                Sort By Flat Number Desc Order
               </button>
             </div>
           <div>
             <select
               name="country_filter"
-              className="m-2 p-2 flex-fill bd-highlight"
+              className="btn btn-outline-warning m-2 p-2"
               id="country_filter"
               onChange={(e) => {
                 setFilter(e.target.value);
               }}
             >
-              <option value="">Filter By Type ........</option>
+              <option value="">Filter By Resident Type ........</option>
               <option value="owner">Owner</option>
               <option value="tenant">Tenant</option>
             </select>
@@ -105,8 +122,8 @@ export const Homepage = () => {
           <div className="position-relative">
           <input
             type="search"
-            className="input-group-text"
-            placeholder="Search"
+            className="btn btn-outline-warning input-group-text p-2 m-2"
+            placeholder="Search Block Name"
             onChange={(e) => {
               updateDebouce(e.target.value);
             }}
@@ -147,15 +164,17 @@ export const Homepage = () => {
           </div>
           </div>
         </div>
+        <br/>
 
-        <table className="table w-75 m-auto">
+        <table className="table w-75 m-auto textclr">
           <thead>
             <tr>
-              <th scope="col">Id</th>
+              <th scope="col">S.No</th>
               <th scope="col">Resident Type</th>
               <th scope="col">Block Name</th>
               <th scope="col">Flat Number </th>
               <th scope="col">Residents</th>
+              <th scope="col">Details</th>
             </tr>
           </thead>
           <tbody>
@@ -180,6 +199,7 @@ export const Homepage = () => {
                         </>
                       ))}
                     </td>
+                    <td>Click</td>
                   </tr>
                 </>
               ))}
