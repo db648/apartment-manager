@@ -80,9 +80,13 @@ export const Homepage = () => {
   return (
     <>
       <NavbarProduct />
-
+      
       <div className="lging">
+      <h1 className="center clr">Apartment-Management System</h1>
+      <br />
+        
         <div className="flex marginl">
+      
             <div>
               <button
                 className="btn btn-outline-warning m-2 p-2 "

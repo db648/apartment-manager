@@ -32,6 +32,9 @@ export const Register = () => {
   return (
     <>
       <Navbar />
+      <div>
+            <h1 className="center clr">Apartment-Management System</h1>
+            </div>
       <section className="h-100 h-custom">
         <div className="container py-5 h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">

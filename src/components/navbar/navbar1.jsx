@@ -13,7 +13,7 @@ export const NavbarProduct = () => {
     }
 
     return (
-        <div className="navbar lging clr">
+        <div className="navbar lgnmain clr">
             <div className="left d-flex justify-content-around p-1">
                 <button type="button" className="btn btn-info" onClick={() => {
                     navigate("/")
@@ -25,7 +25,7 @@ export const NavbarProduct = () => {
 
                
             </div>
-            <h1 className="center">Apartments-Details</h1>
+            
             
             <div className="d-flex bd-highlight">   
                       

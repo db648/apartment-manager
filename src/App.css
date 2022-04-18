@@ -12,8 +12,8 @@
 }
 .center{
   text-align: center;
-  margin-top: 10px;
-  margin-left: 50px;
+  margin: auto;
+
 }
 .marginl{
   margin-left: 13%;
@@ -33,7 +33,7 @@
   font-size: 20px;
 }
 .clr{
-  color: chartreuse;
+  color: rgb(121, 197, 46);
 }
 .singleflatimg{
   background-image: url("https://images.pexels.com/photos/430216/pexels-photo-430216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");

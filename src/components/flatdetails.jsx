@@ -9,26 +9,34 @@ export const FlatDetails = () => {
 
   let arr = useSelector((state) => state.apartmentReducer.flats);
   console.log("arr", arr);
-  const [single, setSingle] = useState({});
   let single2 = arr.filter((ele) => ele._id === id);
   console.log("2222", single2);
 
   return (
     <div className="singleflatimg">
       <NavbarProduct />
-      <div className="bg-light w-75 border m-auto textclr">
-        <h1>Flat details</h1>
+      
+      <div className="bg-light w-50 border m-auto textclr">
+        <br />
         {single2.map((ele) => (
           <>
+          <h1>Flat Number {ele.number} Details</h1>
+          <br />
             <ul>
-              <li>Type {ele.type}</li>
-              <li>Block {ele.block}</li>
-              <li>Number {ele.number}</li>
+              <li>Resident Type : {ele.type}</li>
+              <br />
+              <li>Block Name : {ele.block}</li>
+              
               <ul>
+                <br />
                 {ele.residents.map((ele) => (
                   <>
-                    <li>Name {ele.name}</li>
-                    <li>Age {ele.age}</li>
+                    <li>Name of the Resident : {ele.name}</li>
+                    <br />
+                    <li>Gender of the Resident : {ele.gender}</li>
+                    <br />
+                    <li>Age of the Resident : {ele.age}</li>
+                    <br />
                   </>
                 ))}
               </ul>
