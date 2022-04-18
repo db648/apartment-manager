@@ -30,6 +30,8 @@ export const FlatDetails = () => {
               
               <ul>
                 <br />
+                <h2>Resident Personal Details</h2>
+                <br />
                 {ele.residents.map((ele) => (
                   <>
                     <li>Name of the Resident : {ele.name}</li>
