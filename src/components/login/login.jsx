@@ -24,14 +24,20 @@ export const Login = () => {
       .post("https://flatsunit6.herokuapp.com/user/login", data)
       .then((res) => {       
           console.log("before",res.data)
-        dispatch(loginSuccess(res.data));
-        console.log("after",res.data)
-        setTimeout(() => {
-          navigate("/");
-        }, 1000);
+        if(res.data.status === "false") {
+          setAppend(false);
+          return alert("Enter Correct Details");
+        }
+        else{
+          dispatch(loginSuccess(res.data));
+          console.log("after",res.data)
+          setTimeout(() => {
+            navigate("/");
+          }, 1000);
+        }
       })
       .catch((err) => {
-        alert("Enter Correct Details");
+        return alert("Enter Correct Details");
       });
   };
 
