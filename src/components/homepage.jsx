@@ -10,7 +10,6 @@ export const Homepage = () => {
   const dispatch = useDispatch();
   const [term, setTerm] = useState(null);
   const [filter, setFilter] = useState("");
-  const [sort, setSort] = useState(false);
   const CityData = useSelector((state) => state.apartmentReducer.flats);
   const [resData, setResData] = useState(CityData);
   useEffect(() => {
@@ -31,14 +30,14 @@ export const Homepage = () => {
 
   let data =  useSelector((state) => state.apartmentReducer.flats);
   function sortPopulation() {
-    data = CityData.sort((a, b) => a.number - b.number);
+    data = data.sort((a, b) => a.number - b.number);
     console.log(data);
     setResData([...data]);
   }
 
   let data1 =  useSelector((state) => state.apartmentReducer.flats);
   function sortPopulation1() {
-    data1 = CityData.sort((a, b) => b.number - a.number);
+    data1 = data1.sort((a, b) => b.number - a.number);
     console.log(data);
     setResData([...data]);
   }
@@ -177,7 +176,7 @@ export const Homepage = () => {
               <th scope="col">Resident Type</th>
               <th scope="col">Block Name</th>
               <th scope="col">Flat Number </th>
-              <th scope="col">Residents</th>
+              <th scope="col">Resident Name</th>
               <th scope="col">Details</th>
             </tr>
           </thead>
